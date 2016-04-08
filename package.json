@@ -1,0 +1,46 @@
+{
+  "name": "assemble-choose-files",
+  "description": "Assemble pipeline plugin. Prompts the user to choose which (vinyl) files to write to the file system.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/assemble/assemble-choose-files",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "assemble/assemble-choose-files",
+  "bugs": {
+    "url": "https://github.com/assemble/assemble-choose-files/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "extend-shallow": "^2.0.1"
+  },
+  "devDependencies": {
+    "gulp-format-md": "^0.1.7",
+    "mocha": "^2.4.5"
+  },
+  "keywords": [
+    "assemble",
+    "choose",
+    "files"
+  ],
+  "verb": {
+    "layout": "default",
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": []
+    },
+    "reflinks": [
+      "verb"
+    ]
+  }
+}
