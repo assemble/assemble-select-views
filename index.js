@@ -75,32 +75,32 @@ module.exports = function(config) {
       }
 
       // setup a `choices` questions
-      this.choices('files', keys);
-      this.question('dest', 'Destination directory?');
+      this.choices('selectViews', keys);
+      this.question('selectViewsDest', 'Destination directory?');
 
       // prompt the user
-      this.ask('files', function(err, answers) {
+      this.ask('selectViews', function(err, answers) {
         if (err) {
           cb(err);
           return;
         }
 
-        if (answers.files && answers.files.length) {
+        if (answers.selectViews && answers.selectViews.length) {
           if (!opts.dest) {
-            app.ask('dest', {save: false}, function(err, answers) {
+            app.ask('selectViewsDest', {save: false}, function(err, answers) {
               if (err) {
                 cb(err);
                 return;
               }
               opts.dest = path.resolve(app.cwd, answers.dest);
-              renderFn(answers.files, opts, cb);
+              renderFn(answers.selectViews, opts, cb);
             });
             return;
           }
 
-          renderFn(answers.files, opts, cb);
+          renderFn(answers.selectViews, opts, cb);
         } else {
-          console.log('no files chosen');
+          console.log('no views chosen');
           cb();
         }
       });
