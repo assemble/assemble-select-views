@@ -177,7 +177,7 @@ function isValidInstance(app) {
   if (!app.isApp && !app.isGenerator && !app.isViews) {
     return false;
   }
-  if (app.isRegistered('choose-files')) {
+  if (app.isRegistered('assemble-select-views')) {
     return false;
   }
   return true;

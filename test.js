@@ -18,6 +18,23 @@ describe('assemble-select-views', function() {
     });
   });
 
+  describe('plugin', function() {
+    it('should only register the plugin once', function(cb) {
+      var count = 0;
+      app = assemble();
+      app.on('plugin', function(name) {
+        if (name === 'assemble-select-views') {
+          count++;
+        }
+      });
+      app.use(selectViews());
+      app.use(selectViews());
+      app.use(selectViews());
+      assert.equal(count, 1);
+      cb();
+    });
+  });
+
   describe('errors', function() {
     beforeEach(function() {
       app = assemble();
