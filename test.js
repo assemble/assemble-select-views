@@ -68,6 +68,19 @@ describe('assemble-select-views', function() {
         cb();
       });
     });
+
+    it('should throw an error when the options.collection is not defined', function(cb) {
+      app.create('posts');
+      app.use(questions());
+      app.use(conflicts());
+      app.use(rename());
+
+      app.selectViews(function(err, views) {
+        assert(err);
+        assert.equal(err.message, 'expected options.collection to be a string');
+        cb();
+      });
+    });
   });
 
   describe('plugin', function() {
