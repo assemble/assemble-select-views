@@ -74,9 +74,11 @@ module.exports = function(config) {
         return;
       }
 
+      var msg = opts.message || 'Which views do you want to render?';
+
       // setup a `choices` questions
-      this.choices('selectViews', keys);
       this.question('selectViewsDest', 'Destination directory?');
+      this.choices('selectViews', msg, keys);
 
       // prompt the user
       this.ask('selectViews', function(err, answers) {
