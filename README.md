@@ -10,6 +10,10 @@ Install with [npm](https://www.npmjs.com/):
 $ npm install assemble-select-views --save
 ```
 
+**Example**
+
+[![assemble-select-views](https://cloud.githubusercontent.com/assets/383994/15114173/af5319de-15c6-11e6-8b66-1ff7bcee8ec7.gif)](https://www.npmjs.com/)
+
 ## Usage
 
 ```js
@@ -30,9 +34,9 @@ See [verbfile.js](verbfile.js) for a working example.
 app.create('pages');
 
 // add "pages" to the collection
-app.page('foo.hbs', {content: 'this is {{name}}', data: {name: 'Foo'}});
-app.page('bar.hbs', {content: 'this is {{name}}'});
-app.page('baz.hbs', {content: 'this is {{name}}'});
+app.page('a.hbs', {content: 'this is {{name}}', data: {name: 'Foo'}});
+app.page('b.hbs', {content: 'this is {{name}}', data: {name: 'Bar'}});
+app.page('c.hbs', {content: 'this is {{name}}', data: {name: 'Baz'}});
 
 // register an engine for rendering ".hbs" files
 app.engine('hbs', require('engine-handlebars'));

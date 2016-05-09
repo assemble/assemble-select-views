@@ -19,7 +19,7 @@ module.exports = function(verb) {
   verb.use(select());
 
   verb.docs.option('renameKey', function(key) {
-    return path.basename(key, path.extname(key));
+    return path.basename(key);
   });
 
   verb.task('txt', function(cb) {
