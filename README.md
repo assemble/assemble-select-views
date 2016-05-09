@@ -12,7 +12,7 @@ $ npm install assemble-select-views --save
 
 **Example**
 
-[![assemble-select-views](https://cloud.githubusercontent.com/assets/383994/15114173/af5319de-15c6-11e6-8b66-1ff7bcee8ec7.gif)](https://www.npmjs.com/)
+![assemble-select-views](https://cloud.githubusercontent.com/assets/383994/15114173/af5319de-15c6-11e6-8b66-1ff7bcee8ec7.gif)
 
 ## Usage
 
@@ -56,10 +56,10 @@ app.selectViews('pages', function(err, views) {
 
 You might also be interested in these projects:
 
-* [assemble-fs](https://www.npmjs.com/package/assemble-fs): Assemble plugin to add methods to assemble for working with the file system, like src,… [more](https://www.npmjs.com/package/assemble-fs) | [homepage](https://github.com/assemble/assemble-fs)
 * [assemble](https://www.npmjs.com/package/assemble): Assemble is a powerful, extendable and easy to use static site generator for node.js. Used… [more](https://www.npmjs.com/package/assemble) | [homepage](https://github.com/assemble/assemble)
-* [base-questions](https://www.npmjs.com/package/base-questions): Plugin for base-methods that adds methods for prompting the user and storing the answers on… [more](https://www.npmjs.com/package/base-questions) | [homepage](https://github.com/node-base/base-questions)
+* [assemble-fs](https://www.npmjs.com/package/assemble-fs): Assemble plugin to add methods to assemble for working with the file system, like src,… [more](https://www.npmjs.com/package/assemble-fs) | [homepage](https://github.com/assemble/assemble-fs)
 * [base](https://www.npmjs.com/package/base): base is the foundation for creating modular, unit testable and highly pluggable node.js applications, starting… [more](https://www.npmjs.com/package/base) | [homepage](https://github.com/node-base/base)
+* [base-questions](https://www.npmjs.com/package/base-questions): Plugin for base-methods that adds methods for prompting the user and storing the answers on… [more](https://www.npmjs.com/package/base-questions) | [homepage](https://github.com/node-base/base-questions)
 
 ## Contributing
 
