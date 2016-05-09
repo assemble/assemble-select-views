@@ -1,12 +1,12 @@
 {
-  "name": "assemble-choose-files",
-  "description": "Assemble pipeline plugin. Prompts the user to choose which (vinyl) files to write to the file system.",
+  "name": "assemble-select-views",
+  "description": "Assemble plugin that adds a `.selectViews` method to the instance, for prompting the user to select the views they want to write to the file system.",
   "version": "0.1.0",
-  "homepage": "https://github.com/assemble/assemble-choose-files",
+  "homepage": "https://github.com/assemble/assemble-select-views",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
-  "repository": "assemble/assemble-choose-files",
+  "repository": "assemble/assemble-select-views",
   "bugs": {
-    "url": "https://github.com/assemble/assemble-choose-files/issues"
+    "url": "https://github.com/assemble/assemble-select-views/issues"
   },
   "license": "MIT",
   "files": [
@@ -20,11 +20,19 @@
     "test": "mocha"
   },
   "dependencies": {
+    "base-questions": "^0.6.0",
     "extend-shallow": "^2.0.1"
   },
   "devDependencies": {
+    "assemble-core": "^0.17.1",
+    "base-fs-conflicts": "^0.1.2",
+    "base-fs-rename": "^0.1.2",
+    "delete": "^0.3.2",
+    "engine-handlebars": "^0.8.0",
+    "fs-exists-sync": "^0.1.0",
     "gulp-format-md": "^0.1.7",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "verb-readme-generator": "^0.1.11"
   },
   "keywords": [
     "assemble",
@@ -32,15 +40,27 @@
     "files"
   ],
   "verb": {
+    "toc": false,
     "layout": "default",
+    "tasks": [
+      "readme"
+    ],
     "plugins": [
       "gulp-format-md"
     ],
     "related": {
-      "list": []
+      "list": [
+        "assemble",
+        "assemble-fs",
+        "base-questions",
+        "base"
+      ]
     },
     "reflinks": [
       "verb"
-    ]
+    ],
+    "lint": {
+      "reflinks": true
+    }
   }
 }
