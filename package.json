@@ -20,12 +20,13 @@
     "test": "mocha"
   },
   "dependencies": {
+    "base-cwd": "^0.1.6",
     "base-questions": "^0.6.0",
     "extend-shallow": "^2.0.1"
   },
   "devDependencies": {
     "assemble-core": "^0.17.1",
-    "base-fs-conflicts": "^0.1.2",
+    "base-fs-conflicts": "^0.1.6",
     "base-fs-rename": "^0.1.2",
     "delete": "^0.3.2",
     "engine-handlebars": "^0.8.0",

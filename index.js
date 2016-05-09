@@ -2,6 +2,7 @@
 
 var path = require('path');
 var extend = require('extend-shallow');
+var cwd = require('base-cwd');
 
 module.exports = function(config) {
   config = config || {};
@@ -10,6 +11,8 @@ module.exports = function(config) {
     if (!isValidInstance(app)) {
       return;
     }
+
+    app.use(cwd());
 
     this.define('selectViews', function(name, options, cb) {
       if (typeof name === 'function') {
