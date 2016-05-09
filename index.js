@@ -41,10 +41,10 @@ module.exports = function(config) {
 
       // merge options
       var opts = extend({}, config, this.options, options);
-      if (typeof name === 'undefined') {
+      if (typeof name === 'undefined' || name == null) {
         name = getCollectionName(app, opts);
-        if (err instanceof Error) {
-          cb(err);
+        if (name instanceof Error) {
+          cb(name);
           return;
         }
       }
